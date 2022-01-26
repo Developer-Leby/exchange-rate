@@ -4,7 +4,7 @@
 ![Build](https://img.shields.io/badge/npm-green.svg)
 <br/>
 <br/>
-## [데모 페이지](https://cli.vuejs.org/config/) 확인
+## [데모 페이지](http://leby.dothome.co.kr/) 확인
 <br />
 
 ## 빌드 환경 구성
@@ -17,7 +17,7 @@ npm -v
 
 ### Git Clone
 ```bash
-git clone http://123123123
+git clone https://github.com/Developer-Leby/exchange-rate
 ```
 
 ### 프로젝트에 포함된 패키지 설치
