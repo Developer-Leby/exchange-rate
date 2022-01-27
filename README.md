@@ -4,8 +4,7 @@
 ![Build](https://img.shields.io/badge/npm-green.svg)
 <br/>
 <br/>
-## ![데모 페이지](http://leby.dothome.co.kr/){:target="_blank"} 확인
-<br />
+## [데모 페이지](http://leby.dothome.co.kr/) 확인<br />
 
 ## 요구사항
 - 송금국가는 미국으로 고정입니다. 통화는 미국달러(USD)입니다.
