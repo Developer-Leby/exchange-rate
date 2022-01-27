@@ -12,7 +12,7 @@
         {{ nation.name }}({{ nation.currency }})
       </option>
     </select><br />
-    환율: {{ exchangeRate }} {{ targetCurrency }}/{{ sourceCurrency }}<br/>
+    환율: {{ currencyMoney }} {{ targetCurrency }}/{{ sourceCurrency }}<br/>
     송금액: 
     <input v-model="inputMoney" @keyup.enter="handleSubmit" /> USD<br/>
     <button  @click="handleSubmit">
@@ -34,6 +34,7 @@ import { mapState, mapGetters, mapMutations } from 'vuex';
 import { numberWithCommas } from '../util';
 
 export default {
+  name: 'Main',
   data() {
     return {
       inputMoney: '',      
@@ -52,7 +53,7 @@ export default {
   },
   mounted() {
     this.selectedCurrency = this.targetCurrency;
-    this.$store.dispatch('fetchExchangeRate');
+    this.$store.dispatch('setExchangeRate');
   },
   computed: {
     ...mapState([
@@ -61,7 +62,7 @@ export default {
       'quotes'
     ]),
     ...mapGetters([
-      'exchangeRate',
+      'currencyMoney',
       'calculatorMoney'
     ]),
   },

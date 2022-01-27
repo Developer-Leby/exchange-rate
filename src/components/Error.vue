@@ -11,13 +11,13 @@
 <script>
 
 export default {
-  name: 'ErrorPage',
+  name: 'Error',
   props: {
     message: {
       type: String,
       default: ''
     }
-  },
+  }
 }
 </script>
 
