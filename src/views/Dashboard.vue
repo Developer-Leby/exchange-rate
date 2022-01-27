@@ -14,7 +14,7 @@
     </select><br />
     환율: {{ exchangeRate }} {{ targetCurrency }}/{{ sourceCurrency }}<br/>
     송금액: 
-    <input v-model="money" @keyup.enter="handleSubmit" /> USD<br/>
+    <input v-model="inputMoney" @keyup.enter="handleSubmit" /> USD<br/>
     <button  @click="handleSubmit">
       Submit
     </button><br/><br/>
@@ -36,7 +36,7 @@ import { numberWithCommas } from '../util';
 export default {
   data() {
     return {
-      money: '',      
+      inputMoney: '',      
       selectedCurrency: '',
       nations: [
         { name: '한국', currency: 'KRW' },
@@ -58,27 +58,27 @@ export default {
       'quotes'
     ]),
     ...mapGetters([
-      'exchangeRate'
+      'exchangeRate',
+      'calculatorMoney'
     ]),
-    convertMoney() {      
-      return Number(this.money * this.exchangeRate).toFixed(2);
-    },
   },
   methods: {
     ...mapMutations([
+      'SET_REMITTANCE',
       'SET_TARGET_CURRENCY'
     ]),
     handleSubmit() {
-      this.isWrong = this.money === '' || this.money < 0  || this.money > 10000 || isNaN(Number(this.money));
+      this.isWrong = this.inputMoney === '' || this.inputMoney < 0  || this.inputMoney > 10000 || isNaN(Number(this.inputMoney));
       if (this.isWrong) {
         this.displayText = '송금액이 바르지 않습니다.';
         return;
       }
-      this.displayText = `수취금액은 ${ numberWithCommas(this.convertMoney) } ${this.targetCurrency} 입니다.`;
+      this.SET_REMITTANCE(this.inputMoney);
+      this.displayText = `수취금액은 ${ numberWithCommas(this.calculatorMoney) } ${this.targetCurrency} 입니다.`;
     },
-    handleChangeCurrency() {
-      this.displayText = '';
+    handleChangeCurrency() {      
       this.SET_TARGET_CURRENCY(this.selectedCurrency);
+      this.displayText = '';
     },
   },
 };
