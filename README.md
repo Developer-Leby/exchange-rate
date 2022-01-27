@@ -4,7 +4,7 @@
 ![Build](https://img.shields.io/badge/npm-green.svg)
 <br/>
 <br/>
-## <a href="http://leby.dothome.co.kr/" target="_blank">데모 페이지</a>확인
+## ![데모 페이지](http://leby.dothome.co.kr/){:target="_blank"} 확인
 <br />
 
 ## 요구사항
