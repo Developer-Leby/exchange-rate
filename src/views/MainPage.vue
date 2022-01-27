@@ -47,7 +47,10 @@ export default {
       isWrong: false,
     };
   },
-  created() {
+  created() {    
+    
+  },
+  mounted() {
     this.selectedCurrency = this.targetCurrency;
     this.$store.dispatch('fetchExchangeRate');
   },
