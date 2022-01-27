@@ -1,10 +1,10 @@
 # 환율 계산
-![Vue](https://img.shields.io/badge/Vue-3.0-brightgreen.svg){:target="_blank"}
+![Vue](https://img.shields.io/badge/Vue-3.0-brightgreen.svg)
 ![Vue_CLI](https://img.shields.io/badge/Vue_CLI-yellow.svg)
 ![Build](https://img.shields.io/badge/npm-green.svg)
 <br/>
 <br/>
-## [데모 페이지](http://leby.dothome.co.kr/) 확인
+## <a href="http://leby.dothome.co.kr/" target="_blank">데모 페이지</a>확인
 <br />
 
 ## 요구사항
