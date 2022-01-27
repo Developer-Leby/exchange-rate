@@ -1,9 +1,11 @@
-import MainPage from '../views/MainPage.vue';
-import ErrorPage from '../views/ErrorPage.vue';
+import Main from '@/components/Main.vue';
+import Error from '@/components/Error.vue';
+import NotFound from '@/components/NotFound.vue';
 
 const routes = [
-  { path: '/', component: MainPage },
-  { path: '/errorPage', name: 'ErrorPage', component: ErrorPage, props: true }  
+  { path: '/', component: Main },
+  { path: '/error', name: 'Error', component: Error, props: true },
+  { path: '/:catchAll(.*)', name: 'NotFound', component: NotFound }  
 ]
 
 export default routes;
