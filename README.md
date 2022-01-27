@@ -1,5 +1,5 @@
 # 환율 계산
-![Vue](https://img.shields.io/badge/Vue-3.0-brightgreen.svg)
+![Vue](https://img.shields.io/badge/Vue-3.0-brightgreen.svg){:target="_blank"}
 ![Vue_CLI](https://img.shields.io/badge/Vue_CLI-yellow.svg)
 ![Build](https://img.shields.io/badge/npm-green.svg)
 <br/>
