@@ -29,8 +29,10 @@ const onErrorPage = (message) => {
   router.push({ path: '/error', name: 'Error', params: { message: message } })
 }
 
-export const exchangeRate = {
-  fetch() {
-    return request('GET', '/live', { access_key: ACCESS_KEY })
+export const API = {
+  exchangeRate: {
+    fetch() {
+      return request('GET', '/live', { access_key: ACCESS_KEY })
+    }
   }
 }
